@@ -39,9 +39,11 @@ Prepare datasets:
 - [Matterport3D](https://niessner.github.io/Matterport)
 
 Our extended datasets:
-- 360BEV-Stanford **(New name: Stanford-360)** (**Download from [Google Drive](https://drive.google.com/file/d/1XzhYkJL_5pbT7I4YNiVYGRN-1ay3MsUW/view?usp=sharing)**)
-- 360BEV-Matterport **(New name: Matterport-360)** (**Download from [Google Drive](https://drive.google.com/file/d/1GoskbMx_tZ9kuk39jVeKrOgndMXBz-HP/view?usp=sharing)**)
-- 360FV-Matterport (**Download from [Google Drive](https://drive.google.com/file/d/1RD0sfINWJmGetremLu0ZO7ZvoSYRZVeJ/view?usp=sharing)**)
+- 360BEV-Stanford **(New name: Stanford-360)** (**Download from [Hugging Face](https://huggingface.co/datasets/InSAI-Lab/360BEV/resolve/main/360BEV-Stanford.tar.gz)**)
+- 360BEV-Matterport **(New name: Matterport-360)** (**Download from [Hugging Face](https://huggingface.co/datasets/InSAI-Lab/360BEV/resolve/main/360BEV-Matterport.tar.gz)**)
+- 360FV-Matterport (**Download from [Hugging Face](https://huggingface.co/datasets/InSAI-Lab/360BEV/resolve/main/360FV-Matterport.tar.gz)**)
+
+> **Note:** Datasets and trained model weights are permanently hosted on Hugging Face: [🤗 Dataset Hub](https://huggingface.co/datasets/InSAI-Lab/360BEV), [🤗 Model Zoo](https://huggingface.co/InSAI-Lab/360BEV), and [Collection: 360BEV & 360Mapper](https://huggingface.co/collections/InSAI-Lab/360bev-and-360mapper-wacv-2024-6ad1bdcdeb1718eb4753c447).
 
 Data statistics of 360BEV datasets:
 
@@ -103,7 +105,7 @@ data/
 | :--------- | :--------- | :---- | :---- | :------ |
 | Trans4PASS | MiT-B2     | RGB   | 52.1 |         |
 | CBFC       | ResNet-101 | RGB   | 52.2 |         |
-| Ours       | MiT-B2     | RGB   | **54.3** | [B2](https://drive.google.com/drive/folders/1hPmZaWeojfNVQ3NUI4P1CZafK1X1LRwW?usp=share_link) |
+| Ours       | MiT-B2     | RGB   | **54.3** | [B2](https://huggingface.co/InSAI-Lab/360BEV/tree/main/360FV_Stanford) |
 
 ### 360FV-Matterport
 
@@ -111,7 +113,7 @@ data/
 | :--------- | :--------- | :---- | :---- | :------ |
 |HoHoNet |  ResNet-101 | RGB-D | 44.85 | |
 |SegFormer  |  MiT-B2 | RGB | 45.53 | |
-|Ours |  MiT-B2 | RGB | **46.35** | [B2](https://drive.google.com/drive/folders/14myQElCSWEsI8VvYYWAD_1U412jIqiAa?usp=share_link) |
+|Ours |  MiT-B2 | RGB | **46.35** | [B2](https://huggingface.co/InSAI-Lab/360BEV/resolve/main/360FV_Matterport/fv_mp3d.pkl) |
 
 
 ### 360BEV-Stanford
@@ -119,18 +121,18 @@ data/
 | :--------- | :----------: | :--------: | :---------: | :------------: | :------------: | :-------------- |
 |Trans4Map | MiT-B0 | 86.41 | 40.45 | 57.47 | 32.26 |  |
 |Trans4Map | MiT-B2 | 86.53 | 45.28 | 62.61 | 36.08 |  |
-| Ours | MiT-B0       | 92.07     | 50.14      | 65.37         | 42.42          |  [B0](https://drive.google.com/file/d/1FbUciae3B_xXowtxN6RP7L6NLkIrvXWe/view?usp=share_link) |
-| Ours | MiT-B2       | **92.80** | 53.56      | 67.72         | 45.78          |  [B2](https://drive.google.com/file/d/11PLufI8J3NioD53i0NK3V9oRmZSYbsZO/view?usp=share_link) |
-| Ours | MSCA-B       | 92.67     | **55.02**  | **68.02**     | **46.44**      |  [MSCA-B](https://drive.google.com/file/d/1luGX1s4_rjIvugYDP0U1aspb3tNCjBXN/view?usp=share_link) |
+| Ours | MiT-B0       | 92.07     | 50.14      | 65.37         | 42.42          |  [B0](https://huggingface.co/InSAI-Lab/360BEV/resolve/main/360BEV_Stanford/360BEV_s2d3d_segformer_b0.pkl) |
+| Ours | MiT-B2       | **92.80** | 53.56      | 67.72         | 45.78          |  [B2](https://huggingface.co/InSAI-Lab/360BEV/resolve/main/360BEV_Stanford/360BEV_s2d3d_segformer_b2.pkl) |
+| Ours | MSCA-B       | 92.67     | **55.02**  | **68.02**     | **46.44**      |  [MSCA-B](https://huggingface.co/InSAI-Lab/360BEV/resolve/main/360BEV_Stanford/360BEV_s2d3d_segnext_B.pkl) |
 
 ### 360BEV-Matterport
 | Method    | Backbone | Acc    | mRecall | mPrecision | mIoU        | weights |
 | :--------- | :----------: | :--------: | :---------: | :------------: | :------------: | :-------------- |
 |Trans4Map | MiT-B0 | 70.19 | 44.31 | 50.39 | 31.92  |  |
 |Trans4Map | MiT-B2 | 73.28 | 51.60 | 53.02 | 36.72  |  |
-| Ours | MiT-B0 | 75.44 | 48.80 | 56.01 | 36.98  | [B0](https://drive.google.com/file/d/1B3wtAbb57P56QQIX6tAUNwoRp07Y7zIV/view?usp=share_link) |
-| Ours | MiT-B2 | 78.80 | 59.54 | 59.97 | 44.32  | [B2](https://drive.google.com/file/d/1B1zxgYn5w_VRb1oZ8h4b6Zm0BgQsxlgs/view?usp=share_link) |
-| Ours | MSCA-B |**78.93** | **60.51** | **62.83** | **46.31** | [MSCA-B](https://drive.google.com/file/d/1MoBzRX-GmVEvMlthmvl-n5v2hIe6lOgd/view?usp=share_link) |
+| Ours | MiT-B0 | 75.44 | 48.80 | 56.01 | 36.98  | [B0](https://huggingface.co/InSAI-Lab/360BEV/resolve/main/360BEV_Matterport/360BEV_mp3d_segformer_b0.pkl) |
+| Ours | MiT-B2 | 78.80 | 59.54 | 59.97 | 44.32  | [B2](https://huggingface.co/InSAI-Lab/360BEV/resolve/main/360BEV_Matterport/360BEV_mp3d_segformer_b2.pkl) |
+| Ours | MSCA-B |**78.93** | **60.51** | **62.83** | **46.31** | [MSCA-B](https://huggingface.co/InSAI-Lab/360BEV/resolve/main/360BEV_Matterport/360BEV_mp3d_segnext_B.pkl) |
 
 ### Installation
 ```bash
